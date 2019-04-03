@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+
+    <div id="myDiv">
+        <p>{{message}}</p>
+        <button @click="hello()">点击我</button>
+    </div>
+    <div id="app">
+        <input type="checkbox" v-model="flag">this
+        <input type="text" v-model="aaa">{{aaa}}
+    </div>
+
+    <script>
+        var  vue = new Vue({
+            el:"#myDiv",
+            data:{
+                message:'hello world'
+            },
+            methods:{
+                hello:function () {
+                    alert("hello world");
+                }
+            }
+        });
+
+        var vue2 = new Vue({
+            el:'#app',
+            data:{
+                flag:true,
+                aaa:'this is'
+            }
+        });
+    </script>
+
+</body>
+</html>
